@@ -1,0 +1,16 @@
+/* Reference-sized typography without changing the accessible text or line boxes. */
+body{overflow-x:clip}
+.shortcut{border-color:transparent;background:transparent}
+@media(min-width:760px){.home-hero .chrome{right:0;width:600px}}
+@media(max-width:759px){
+ .home-title{font-size:34vw;transform:scaleX(1.23);transform-origin:left center;width:81%;margin-top:74px}
+ .home-hero{padding-top:32px}
+ .shortcuts{margin-top:20px}
+ .shortcut{height:96px}
+ .home-hero .chrome{top:-35px;right:-31%}
+ .hero.chat h1{font-size:22vw;line-height:1.12;transform:scaleX(1.08);transform-origin:left center;width:92%}
+ .hero.people h1,.hero.account h1{font-size:21vw;line-height:1.08}
+ .hero.events h1{font-size:24vw;line-height:1.05}
+ .stats{padding:13px 0}
+ .home .footer-note{margin-top:16px}
+}

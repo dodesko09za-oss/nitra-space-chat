@@ -1,0 +1,32 @@
+{
+  "name": "nitra-space-chat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --configLoader runner",
+    "build": "vite build --configLoader runner",
+    "preview": "vite preview",
+    "typecheck": "tsc --allowJs --checkJs --noEmit --strict false --skipLibCheck --target ES2023 --module NodeNext --moduleResolution NodeNext --lib ES2023,DOM server/news-ai.js server/news-generation.js server/news-photo.js server/local-ollama.js server/news-card.js server/editorial-discovery.js src/features/news-cover.js",
+    "test": "node --test tests/features.test.js tests/news-automation.test.js tests/editorial-session.test.js tests/drop-video.test.js",
+    "lint": "eslint server/editorial-discovery.js server/news-ai.js server/news-generation.js server/news-photo.js server/local-ollama.js server/news-card.js server/news-discover-handler.js api/editorial-discover.js api/news-generate.js api/news-discover.js api/news-card.js api/news-automation.js src/features/editorial-admin.js src/features/editorial-news.js src/features/news-cover.js tests/news-automation.test.js vite.config.js"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@fontsource/anton": "5.3.0",
+    "@napi-rs/canvas": "^1.0.9",
+    "@resvg/resvg-js": "2.6.2",
+    "@supabase/supabase-js": "^2.57.0",
+    "fast-xml-parser": "5.11.1",
+    "mp4-muxer": "^5.2.2",
+    "opentype.js": "2.0.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "eslint": "^10.10.0",
+    "typescript": "^7.0.2",
+    "vite": "^7.1.3"
+  }
+}

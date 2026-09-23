@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Arimo';
+  src: url('/fonts/Arimo.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}

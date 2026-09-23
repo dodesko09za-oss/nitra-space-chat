@@ -1,0 +1,31 @@
+{
+  "functions": {
+    "api/news-card.js":{"includeFiles":"node_modules/@fontsource/anton/files/*.woff"},
+    "api/news-generate.js":{"includeFiles":"node_modules/@fontsource/anton/files/*.woff","maxDuration":300},
+    "api/editorial-discover.js":{"includeFiles":"node_modules/@fontsource/anton/files/*.woff","maxDuration":300},
+    "api/news-automation.js":{"includeFiles":"node_modules/@fontsource/anton/files/*.woff","maxDuration":300},
+    "api/drop-mp4.js":{"includeFiles":"node_modules/@napi-rs/canvas*/**","maxDuration":300}
+  },
+  "crons": [{"path":"/api/news-automation","schedule":"0 6 * * *"}],
+  "headers": [
+    {
+      "source": "/((?!assets/).*)",
+      "headers": [
+        {"key": "Cache-Control", "value": "no-store, max-age=0"}
+      ]
+    }
+  ],
+  "rewrites": [
+    {"source":"/news/:path*","destination":"/index.html"},
+    {"source":"/polls","destination":"/index.html"},
+    {"source":"/people/:path*","destination":"/index.html"},
+    {"source":"/messages/:path*","destination":"/index.html"},
+    {"source":"/account","destination":"/index.html"},
+    {"source":"/activity","destination":"/index.html"},
+    {"source":"/admin/:path*","destination":"/index.html"},
+    {
+      "source": "/chat",
+      "destination": "/chat.html"
+    }
+  ]
+}
